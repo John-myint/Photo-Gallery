@@ -18,20 +18,42 @@ const changeImage = () => {
     imgName.textContent = images[i].name;
 }
 
-nextBtn.addEventListener("click", () => {  
-            if (i < images.length - 1) {
-                ++i;
-            } else {
-                i = 0;
-            }
-    changeImage();    
-})
+const nextImage = () => {
+    if (i < images.length - 1) {
+        ++i;
+    } else {
+        i = 0;
+    }
+changeImage();
+}
 
-preBtn.addEventListener("click", () => {  
+const preImage = () => {
     if (i === 0) {
         i = images.length - 1;
     } else {
         --i;
     }
     changeImage();
+}
+
+nextBtn.addEventListener("click", () => {  
+    nextImage();
+})
+
+preBtn.addEventListener("click", () => {  
+    preImage();
+})
+
+document.addEventListener("keydown", (event) => {
+    const key = event.key;
+    if (key === "ArrowRight") {
+        nextImage();
+    } 
+})
+
+document.addEventListener("keydown", (event) => {
+    const key = event.key;
+    if(key === "ArrowLeft") {
+    preImage();
+    }
 })
