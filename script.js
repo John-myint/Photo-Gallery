@@ -19,12 +19,8 @@ const changeImage = () => {
 }
 
 const nextImage = () => {
-    if (i < images.length - 1) {
-        ++i;
-    } else {
-        i = 0;
-    }
-changeImage();
+    i < images.length -1 ? ++i : i = 0;
+    changeImage();
 }
 
 const preImage = () => {
@@ -33,6 +29,7 @@ const preImage = () => {
     } else {
         --i;
     }
+    i === 0 ? i = images.length -1 : --i;
     changeImage();
 }
 
