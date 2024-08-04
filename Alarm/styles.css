@@ -6,16 +6,16 @@
 }
 
 .input {
-    font-size: 50px;
+    font-size: 30px;
     font-family:'Times New Roman', Times, serif;
-    width: 300px;
+    width: 150px;
     border-radius: 20px;
     padding: 20px;
     margin: 20px;
 }
 
 .display {
-    font-size: 200px;
+    font-size: 100px;
     margin: 20px;
     font-family: 'Times New Roman', Times, serif;
 }
